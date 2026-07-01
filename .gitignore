@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# generated image derivatives (rebuilt by prebuild; CI caches them)
+/public/images/designs/
+/.image-cache.json
+
+# generated catalog (rebuilt by prebuild)
+/src/data/catalog.generated.json
+
+# misc
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# session memory tooling (not part of the app)
+/.remember/
+/.claude/

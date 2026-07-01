@@ -1,0 +1,56 @@
+:root {
+  /* Palette lifted verbatim from the prototype */
+  --paper: #e4d8bc;
+  --paper-light: #efe6d0;
+  --ink: #1f1b16;
+  --ink-soft: #2a241c;
+  --cream: #e8dcc0;
+  --brown-muted: #7a6a50;
+  --brown-mid: #5a4a3a;
+  --gold-border: #b9a980;
+  --gold-caption: #c9b483;
+  --gold-dark: #8a6d2f;
+  --frame: #3a2f24;
+  --frame-inner: #2a2118;
+  --frame-edge: #5a4a3a;
+  --overlay: rgba(20, 16, 11, 0.82);
+
+  /* Paper-grain texture (inline SVG so no basePath worries) */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  background-image: var(--grain);
+  color: var(--ink);
+  font-family: var(--font-body), serif;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.5s ease both;
+}

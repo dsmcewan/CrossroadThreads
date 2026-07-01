@@ -1,0 +1,8 @@
+.footer {
+  text-align: center;
+  padding: 30px 20px 44px;
+  font-family: var(--font-body), serif;
+  font-style: italic;
+  color: var(--brown-muted);
+  font-size: 0.85rem;
+}

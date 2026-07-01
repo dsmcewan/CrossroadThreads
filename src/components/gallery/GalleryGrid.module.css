@@ -1,0 +1,36 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px 16px 6px;
+}
+
+.stamp {
+  font-family: var(--font-caps), serif;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  padding: 7px 14px;
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.stamp:hover {
+  transform: rotate(-1.5deg) !important;
+}
+
+.stampActive {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.gallery {
+  column-width: 270px;
+  column-gap: 22px;
+  padding: 22px clamp(14px, 4vw, 44px) 60px;
+  max-width: 1240px;
+  margin: 0 auto;
+}

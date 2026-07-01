@@ -1,0 +1,27 @@
+.chip {
+  font-family: var(--font-caps), serif;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.chip[data-small] {
+  font-size: 0.62rem;
+  padding: 2px 8px;
+}
+
+.chip[data-status="ON DISPLAY"] {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.chip[data-status="IN CONSERVATION"] {
+  background: var(--gold-dark);
+  color: #f4ecd8;
+}
+
+.chip[data-status="UNDER STUDY"] {
+  background: var(--brown-mid);
+  color: var(--cream);
+}

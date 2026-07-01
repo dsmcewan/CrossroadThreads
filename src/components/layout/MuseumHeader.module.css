@@ -1,0 +1,43 @@
+.facade {
+  text-align: center;
+  padding: 44px 20px 26px;
+  border-bottom: 3px double var(--ink);
+  position: relative;
+}
+
+.department {
+  font-family: var(--font-caps), serif;
+  letter-spacing: 0.35em;
+  font-size: 0.72rem;
+  color: var(--brown-muted);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-display), serif;
+  font-size: clamp(2rem, 7vw, 3.6rem);
+  margin: 0;
+  line-height: 1.02;
+  text-shadow: 2px 2px 0 var(--gold-border);
+}
+
+.titleLink {
+  text-decoration: none;
+}
+
+.subtitle {
+  font-family: var(--font-body), serif;
+  font-style: italic;
+  margin-top: 10px;
+  color: var(--brown-mid);
+}
+
+.plaque {
+  margin-top: 16px;
+  display: inline-block;
+  border: 1px solid var(--ink);
+  padding: 4px 16px;
+  font-family: var(--font-caps), serif;
+  letter-spacing: 0.25em;
+  font-size: 0.68rem;
+}

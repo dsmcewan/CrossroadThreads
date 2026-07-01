@@ -1,0 +1,30 @@
+{
+  "name": "crossroad-collection",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "tsx scripts/build-catalog.ts",
+    "dev": "next dev",
+    "prebuild": "tsx scripts/build-catalog.ts",
+    "build": "next build",
+    "postbuild": "node scripts/verify-export.mjs",
+    "catalog": "tsx scripts/build-catalog.ts",
+    "preview:pages": "node scripts/preview-pages.mjs",
+    "test": "vitest run",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "sharp": "^0.34.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5",
+    "vitest": "^3.1.0"
+  }
+}

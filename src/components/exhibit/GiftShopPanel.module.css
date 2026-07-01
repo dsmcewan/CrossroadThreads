@@ -1,0 +1,79 @@
+.panel {
+  margin-top: 24px;
+  border: 1px solid var(--gold-border);
+  background: var(--paper-light);
+  padding: 18px 20px;
+}
+
+.heading {
+  margin: 0 0 12px;
+  font-family: var(--font-caps), serif;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brown-mid);
+}
+
+.offerings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offering {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px dashed var(--gold-border);
+  padding-bottom: 10px;
+}
+
+.offering:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.offeringText {
+  display: flex;
+  flex-direction: column;
+}
+
+.offeringLabel {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.offeringPrice {
+  font-size: 13px;
+  color: var(--brown-muted);
+}
+
+.acquire {
+  font-family: var(--font-caps), serif;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--cream);
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.acquire:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.notice {
+  margin: 14px 0 0;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gold-dark);
+  border-left: 3px solid var(--gold-dark);
+  padding-left: 10px;
+}
