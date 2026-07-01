@@ -7,7 +7,9 @@
 
 **Live: [dsmcewan.github.io/CrossroadThreads](https://dsmcewan.github.io/CrossroadThreads/)**
 
-![The gallery — masonry of framed exhibits with wing filters](docs/screenshots/gallery.png)
+<p align="center">
+  <img src="docs/screenshots/hero.jpg" alt="The gallery — masonry of framed exhibits with wing filters" width="720">
+</p>
 
 Crossroad Threads is an apparel brand where Southern Gothic Americana meets
 mythology — "a publishing house that prints on cotton." The storefront leans
