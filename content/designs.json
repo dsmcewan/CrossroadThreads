@@ -251,7 +251,7 @@
     {
       "sourceFile": "file_00000000153061f782f48f047c157ab3-edbafea0-f176-48c5-82a1-ee9420d9544f.png",
       "slug": "aztec-artichoke",
-      "title": "AZTEC",
+      "title": "Aztec",
       "tagline": "Even Artichokes Have Hearts",
       "wing": "bless-your-heart",
       "status": "ON DISPLAY",
@@ -296,7 +296,7 @@
     {
       "sourceFile": "file_0000000011fc71f5887c70bda60fa901-1e6f966b-b087-47a9-b344-6be3da1b2c67.png",
       "slug": "artichoke-hearts-nocturne",
-      "title": "EVEN ARTICHOKES HAVE HEARTS",
+      "title": "Even Artichokes Have Hearts",
       "tagline": "A nocturne in cream on black",
       "wing": "bless-your-heart",
       "status": "ON DISPLAY",
@@ -326,7 +326,7 @@
     {
       "sourceFile": "file_000000000b2061fb8f64c705f53e6b98-129470ae-d121-4854-91d8-591d444bb729.png",
       "slug": "caligula-seemed-normal",
-      "title": "CALIGULA",
+      "title": "Caligula",
       "tagline": "Seemed Normal to Me",
       "wing": "cautionary-tales",
       "status": "ON DISPLAY",
@@ -370,16 +370,23 @@
     },
     {
       "sourceFile": "file_0000000032b062309deb77f30347cde1-a65fcba5-7c9c-44a8-9f66-5d27b6ab0fec.png",
-      "slug": "djinn-2",
-      "title": "DJINN & TOXIC — ONE WISH TOO MANY",
+      "slug": "djinn-and-toxic-one-wish-too-many",
+      "title": "Djinn & Toxic",
       "wing": "cautionary-tales",
       "status": "ON DISPLAY",
-      "stopNumber": 23
+      "stopNumber": 23,
+      "tagline": "One wish too many",
+      "era": "Pre-Islamic Arabia, ongoing",
+      "region": "The Black Desert, after hours",
+      "medium": "Single-color print on black cotton",
+      "edition": "Open edition",
+      "placard": "The bottle did not break itself. Somewhere between the third wish and the fourth, a customer discovered the difference between what he asked for and what he wanted. The management accepts no liability after the stopper leaves the vessel.",
+      "audioGuide": "Observe the vessel: cracked from within, the stopper thrown well clear. This is what remains when a customer, flush from three successful wishes, elects to negotiate a fourth. Note the expression — not anger, but professional satisfaction. The fine print has never once lost on appeal."
     },
     {
       "sourceFile": "file_00000000374861f687e7dd3e95d9df7a-dcb4324c-9cdd-4865-9450-ad8a0157ce10.png",
       "slug": "djinn-poster-variant",
-      "title": "DJINN AND TOXIC",
+      "title": "Djinn and Toxic",
       "tagline": "Exhibition poster, second state",
       "wing": "cautionary-tales",
       "status": "UNDER STUDY",
@@ -394,7 +401,7 @@
     {
       "sourceFile": "file_00000000151861f5976722c0c1b91eea-94386d85-447a-467b-9874-3615d4c470b4.png",
       "slug": "dodecahedrons",
-      "title": "DODECAHEDRRONS",
+      "title": "Dodecahedrrons",
       "tagline": "Trust Me, It'll Be Hilarious",
       "wing": "cautionary-tales",
       "status": "IN CONSERVATION",
@@ -500,7 +507,7 @@
     {
       "sourceFile": "file_0000000022dc622f96a2c78291d30d99-eb4ce434-49be-4c3b-939f-01f4d60673d4.png",
       "slug": "johnny-dodecahedrons",
-      "title": "JOHNNY DODECAHEDRRONS",
+      "title": "Johnny Dodecahedrrons",
       "tagline": "Trust Me, It'll Be Hilarious",
       "wing": "cautionary-tales",
       "status": "IN CONSERVATION",
@@ -516,7 +523,7 @@
     {
       "sourceFile": "file_0000000000e461fda535143e96e78150-3c20d9bf-2f38-4822-8b25-2e3cf898e50f.png",
       "slug": "marie-antoinette-homemade",
-      "title": "MARIE ANTOINETTE",
+      "title": "Marie Antoinette",
       "tagline": "Homemade Made Easy",
       "wing": "cautionary-tales",
       "status": "ON DISPLAY",
@@ -531,7 +538,7 @@
     {
       "sourceFile": "file_000000000e146230a753da77f8eec813-69cf3e19-57df-4559-b855-7f24ff053068.png",
       "slug": "never-trust-the-fae",
-      "title": "NEVER TRUST THE FAE",
+      "title": "Never Trust the Fae",
       "tagline": "One Night Only · Midnight Set",
       "wing": "cautionary-tales",
       "status": "ON DISPLAY",
@@ -652,7 +659,7 @@
     {
       "sourceFile": "file_000000000dd871fd87e9a51a80710025-b8e663f8-15bd-4ba9-a376-f9ee22cd0a7c.png",
       "slug": "roman-scorpio",
-      "title": "ROMAN SCORPIO",
+      "title": "Roman Scorpio",
       "tagline": "Put a Pin in It",
       "wing": "cautionary-tales",
       "status": "ON DISPLAY",
@@ -712,7 +719,7 @@
     {
       "sourceFile": "file_0000000037a461f990f652d526f42b2a-0baad0ce-acff-4775-b69a-4e1111c8a96a.png",
       "slug": "sphinx-question",
-      "title": "SPHINX — CAN I ASK YOU SOMETHING?",
+      "title": "Sphinx — Can I Ask You Something?",
       "tagline": "It's kind of a riddle",
       "wing": "cautionary-tales",
       "status": "ON DISPLAY",
@@ -727,7 +734,7 @@
     {
       "sourceFile": "file_00000000051061f7aca8d2e5f9afc7d6-784460df-2504-4a3b-96f0-560c1bcf8e70.png",
       "slug": "the-gaul-tribal-tour",
-      "title": "THE GAUL",
+      "title": "The Gaul",
       "tagline": "What's in the Woods",
       "wing": "cautionary-tales",
       "status": "ON DISPLAY",
@@ -774,7 +781,7 @@
     {
       "sourceFile": "file_000000000e0861f59c7d2ad3b628d9a4-4d5b29b4-2ae0-40c3-9406-83e98ef5c12d.png",
       "slug": "warwolf-siege-tour",
-      "title": "WARWOLF",
+      "title": "Warwolf",
       "tagline": "The Ludgar Yeet!",
       "wing": "cautionary-tales",
       "status": "ON DISPLAY",
@@ -835,7 +842,7 @@
     {
       "sourceFile": "file_0000000000d0622f891d81026e2b2e90-18ca8157-66ff-41ca-b615-7604eaf70934.png",
       "slug": "dionysus-winery",
-      "title": "DIONYSUS WINERY & DISTILLERY",
+      "title": "Dionysus Winery & Distillery",
       "tagline": "Whine and Rebirth",
       "wing": "fake-business-format",
       "status": "ON DISPLAY",
@@ -865,7 +872,7 @@
     {
       "sourceFile": "file_000000001b6461fdbe15c71db2947cd9-950ad789-0c79-435d-8d4f-b9c7ff84123c.png",
       "slug": "hephaestus-net-repair",
-      "title": "HEPHAESTUS",
+      "title": "Hephaestus",
       "tagline": "Net Repair and Tools",
       "wing": "fake-business-format",
       "status": "ON DISPLAY",
@@ -925,7 +932,7 @@
     {
       "sourceFile": "file_000000003a50622fa0f74775ab518a03-2301d2f3-f99d-4e1a-80f1-b57787440fe8.png",
       "slug": "pandora-box-your-chaos",
-      "title": "PANDORA — BOX YOUR CHAOS",
+      "title": "Pandora — Box Your Chaos",
       "tagline": "Box up your troubles today!",
       "wing": "fake-business-format",
       "status": "ON DISPLAY",
@@ -940,7 +947,7 @@
     {
       "sourceFile": "file_000000003cc871f8b72b622edf0c6ff5-efcd5b22-0809-47d5-8b50-81d809f964a6.png",
       "slug": "roman-scorpio-2",
-      "title": "ROMAN SCORPIO — PUT A PIN IN IT",
+      "title": "Roman Scorpio — Put a Pin in It",
       "tagline": "Precision follow-up since 52 BC",
       "wing": "fake-business-format",
       "status": "ON DISPLAY",
@@ -971,7 +978,7 @@
     {
       "sourceFile": "file_000000001dc061f78d50e65b6106d8a0-4db05728-b7da-4356-9e0c-4d84afa1e3c3.png",
       "slug": "wallachia-interior-design",
-      "title": "VOIVODE OF WALLACHIA INTERIOR DESIGN",
+      "title": "Voivode of Wallachia Interior Design",
       "tagline": "Timeless Elegance…",
       "wing": "fake-business-format",
       "status": "ON DISPLAY",
@@ -1016,7 +1023,7 @@
     {
       "sourceFile": "file_00000000194471fd824e38d13f968314-3e967073-830d-47cc-af77-60abf5e10dfa.png",
       "slug": "artemis-orion-challenge-2",
-      "title": "ARTEMIS",
+      "title": "Artemis",
       "tagline": "Ask About Our Orion Challenge",
       "wing": "the-pantheon",
       "status": "ON DISPLAY",
@@ -1030,12 +1037,19 @@
     },
     {
       "sourceFile": "file_000000003f2471fd965ee192fe6b2a32-c31df72a-5c56-40bf-a33d-f43184b8d804.png",
-      "slug": "artemis-2",
-      "title": "ARTEMIS — THE ORION CHALLENGE",
-      "tagline": "Land Among the Stars",
+      "slug": "artemis-orion-challenge-gilt",
+      "title": "Artemis — The Orion Challenge",
+      "tagline": "Land among the stars",
       "wing": "the-pantheon",
-      "status": "ON DISPLAY",
-      "stopNumber": 67
+      "status": "UNDER STUDY",
+      "stopNumber": 67,
+      "era": "Archaic Greece",
+      "region": "The night sky, contested",
+      "medium": "Gilt plate on black cotton",
+      "edition": "Study collection — one of several impressions",
+      "conservatorNote": "Conservator’s note: gilt impression of a broadside the archive holds in several states. Which plate came first is a matter of internal dispute the committee has agreed to stop having in public.",
+      "placard": "Promotional print for an open challenge. Orion boasted he would hunt every beast on earth; he is now seasonal décor in the northern sky. Applicants are advised that the goddess considers this an invitation, not a warning.",
+      "audioGuide": "The Orion Challenge, gilt state. The hunter Orion announced he would kill every animal alive, and the sky received him shortly thereafter — you may view him there on clear nights, pinned in place. The goddess extends the same opportunity to all comers. Land among the stars. The phrasing, you will notice, promises nothing about the manner of arrival."
     },
     {
       "sourceFile": "file_00000000777471fda9b7f55e7589f31c-6cdb2323-9f9d-477f-a13b-9a5d15cfa146.png",
@@ -1100,7 +1114,7 @@
     {
       "sourceFile": "file_0000000029d061f991916e79fbe15347-317cd239-4bc7-4a2e-bda7-66837c3f5e45.png",
       "slug": "dont-put-that-hermes",
-      "title": "DON'T PUT THAT HERMES",
+      "title": "Don't Put That Hermes",
       "tagline": "The messenger regrets the message",
       "wing": "the-pantheon",
       "status": "ON DISPLAY",
@@ -1146,7 +1160,7 @@
     {
       "sourceFile": "file_000000001e8c61f98239b5a010f33cda-16fc8eaf-3722-493a-bc18-12ab4e92e95f.png",
       "slug": "hermes-fell-on-it",
-      "title": "HERMES",
+      "title": "Hermes",
       "tagline": "Don't Put That There — The \"Fell On It\" Special",
       "wing": "the-pantheon",
       "status": "IN CONSERVATION",
@@ -1192,7 +1206,7 @@
     {
       "sourceFile": "file_0000000034c061f7846f1070b944461d-bf28a5b0-5779-44aa-8a66-a4db596e486d.png",
       "slug": "kali-world-tour",
-      "title": "KALI — WORLD TOUR",
+      "title": "Kali — World Tour",
       "tagline": "All dates final",
       "wing": "the-pantheon",
       "status": "ON DISPLAY",
@@ -1221,11 +1235,19 @@
     },
     {
       "sourceFile": "file_00000000313461f59461db9cf3e40572-dd1691c7-18b8-49a5-b1c0-7dc902a5a0d6.png",
-      "slug": "medusa-2",
-      "title": "MEDUSA — LOOK AWAY, DARLING",
-      "wing": "the-pantheon",
-      "status": "ON DISPLAY",
-      "stopNumber": 80
+      "slug": "medusa-hand-mirror",
+      "title": "Medusa",
+      "wing": "cautionary-tales",
+      "status": "UNDER STUDY",
+      "stopNumber": 80,
+      "tagline": "Look away, darling",
+      "era": "Mythic Greece",
+      "region": "The temple of Athena, then exile",
+      "medium": "Single-color print on parchment",
+      "edition": "Study collection — second state",
+      "conservatorNote": "Conservator’s note: second state of the composition. The mirror now reads as a mirror, cracked from the inside. The bicycle wheel has been retired from the collection’s discourse. Tagline still prints twice; at this point the conservators suspect emphasis.",
+      "placard": "Second state of the Medusa broadside, cut after visitor feedback on the first. The mirror is now unambiguous, and cracked — it saw her before you did. Her eyes are open in this state. The rope line is not decorative.",
+      "audioGuide": "The revised composition. Where the first state offered an ambiguous oval — the visitors’ book records the word bicycle more than once — this impression leaves no room for doubt: a hand mirror, fractured from the inside out. Do note that her eyes are open here. The conservators ask that you keep to the marked path, and they ask it only once."
     },
     {
       "sourceFile": "file_000000005070622fb63a9e0f2ade9ced-63733c42-c307-481b-bd3b-aece1ca4bc05.png",
@@ -1245,7 +1267,7 @@
     {
       "sourceFile": "file_000000000a24622f8539ae7ec5147f11-def6d21c-458d-49ff-a420-102650d05bb9.png",
       "slug": "not-as-pictured",
-      "title": "NOT AS PICTURED",
+      "title": "Not as Pictured",
       "tagline": "Bull · Swan · Eagle",
       "wing": "the-pantheon",
       "status": "ON DISPLAY",
@@ -1351,12 +1373,19 @@
     },
     {
       "sourceFile": "file_0000000024b461f89fe6df0b640801d6-c3f53099-cfd1-4f6b-8362-31f33d932bf9.png",
-      "slug": "rudis-2",
-      "title": "RUDIS — I'LL SHOW YOU MINE, IF YOU SHOW ME YOURS",
-      "tagline": "Crossroad Threads Tour 1980 AD",
-      "wing": "the-pantheon",
-      "status": "ON DISPLAY",
-      "stopNumber": 89
+      "slug": "rudis-tour-1980-ad",
+      "title": "Rudis",
+      "tagline": "I’ll show you mine, if you show me yours",
+      "wing": "cautionary-tales",
+      "status": "UNDER STUDY",
+      "stopNumber": 89,
+      "era": "Roman Empire, disputed",
+      "region": "The arenas of Italia",
+      "medium": "Single-color print on black cotton",
+      "edition": "Study collection — date under review",
+      "conservatorNote": "Conservator’s note: the tour date reads 1980 AD; a sister plate reads 79 AD. One of them is off by a millennium and neither printer will concede. The swords here are wooden, which the conservators consider the stronger claim to the title.",
+      "placard": "Tour print for the freedom circuit, wooden swords crossed before the Colosseum. The rudis was awarded once, on the day a gladiator won his release — a blade that could not cut anything except a career short. The date is printed with confidence, if not accuracy.",
+      "audioGuide": "Two wooden swords, crossed — and unlike their steel cousins on the neighboring print, these are the genuine article. A rudis could not draw blood, which was precisely the point: it was handed to a gladiator exactly once, on the day the fighting ended for good. As for the tour date of 1980 AD, the archive can only say that somewhere, a typesetter is standing by his work."
     },
     {
       "sourceFile": "file_00000000554c622fafcc657d6c97cf25-fba62d5a-7efa-430c-8e0d-40bfd9f105e8.png",
@@ -1436,7 +1465,7 @@
     {
       "sourceFile": "file_000000000f7861f998fefac78fb46742-20f31d1c-46c4-4ba0-85b4-d41ce4c18b2b.png",
       "slug": "sphinx-questions",
-      "title": "SPHINX",
+      "title": "Sphinx",
       "tagline": "\"She's Got Questions\"",
       "wing": "the-pantheon",
       "status": "ON DISPLAY",
@@ -1497,7 +1526,7 @@
     {
       "sourceFile": "file_00000000245c71f880eb250367a433f6-fac7bf97-9854-4a61-a28c-897edb38be56.png",
       "slug": "lady-jane-grey-cleanse",
-      "title": "LADY JANE GREY — 9 DAY JUICE CLEANSE",
+      "title": "Lady Jane Grey — 9 Day Juice Cleanse",
       "tagline": "Detox Before You Detox",
       "wing": "princess-treatment",
       "status": "ON DISPLAY",
@@ -1527,7 +1556,7 @@
     {
       "sourceFile": "file_00000000341c61f7abe78a8817ae78bb-6f2b1e67-8c87-4baa-8bd8-bf6e8d6fca91.png",
       "slug": "bloody-mary-queen-of-scots",
-      "title": "MARY, QUEEN OF SCOTS",
+      "title": "Mary, Queen of Scots",
       "tagline": "The Original Bloody Mary",
       "wing": "princess-treatment",
       "status": "ON DISPLAY",
@@ -1542,7 +1571,7 @@
     {
       "sourceFile": "file_00000000127461f7bcacb7882754b037-5410259d-1be8-4ef3-aabb-419ac00c6895.png",
       "slug": "olga-of-kiev",
-      "title": "OLGA OF KIEV",
+      "title": "Olga of Kiev",
       "tagline": "She Mourned Her Husband in Pieces",
       "wing": "princess-treatment",
       "status": "ON DISPLAY",
@@ -1557,7 +1586,7 @@
     {
       "sourceFile": "file_0000000015ec71fdaf21fe28f4ff6924-9be54327-45e8-4335-9425-3164944dacc2.png",
       "slug": "romanov-spa-day",
-      "title": "ROMANOV SPA DAY",
+      "title": "Romanov Spa Day",
       "tagline": "Relaxation, imperially discontinued",
       "wing": "princess-treatment",
       "status": "ON DISPLAY",
