@@ -1,0 +1,40 @@
+.handset {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: var(--font-display), serif;
+}
+
+.handset:hover {
+  transform: rotate(-1.5deg);
+}
+
+.playing {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.playing svg {
+  animation: sway 1.2s ease-in-out infinite alternate;
+}
+
+.stopNo {
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+@keyframes sway {
+  from {
+    transform: rotate(-6deg);
+  }
+  to {
+    transform: rotate(6deg);
+  }
+}

@@ -10,6 +10,7 @@
     "postbuild": "node scripts/verify-export.mjs",
     "catalog": "tsx scripts/build-catalog.ts",
     "preview:pages": "node scripts/preview-pages.mjs",
+    "audio": "tts/.venv/Scripts/python tts/generate_audio.py",
     "test": "vitest run",
     "lint": "next lint"
   },

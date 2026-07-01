@@ -2,14 +2,16 @@
 
 import { useState } from "react";
 import type { Design, Wing } from "@/lib/types";
-import { COPY } from "@/lib/copy";
 import StatusChip from "@/components/ui/StatusChip";
+import audioManifest from "@/data/audio.manifest.json";
+import AudioTourButton from "./AudioTourButton";
 import styles from "./Placard.module.css";
 
-type Mode = "PLACARD" | "AUDIO GUIDE";
+const AUDIO_SLUGS = new Set<string>(audioManifest.files);
 
 export default function Placard({ design, wing }: { design: Design; wing?: Wing }) {
-  const [mode, setMode] = useState<Mode>("PLACARD");
+  const [listening, setListening] = useState(false);
+  const hasAudio = AUDIO_SLUGS.has(design.slug);
 
   const facts: Array<[string, string]> = [
     ["Era", design.era],
@@ -20,25 +22,25 @@ export default function Placard({ design, wing }: { design: Design; wing?: Wing 
 
   return (
     <div className={styles.placard}>
-      <div className={styles.tabs}>
-        {(["PLACARD", "AUDIO GUIDE"] as const).map((m) => (
-          <button
-            key={m}
-            onClick={() => setMode(m)}
-            className={`${styles.tab} ${mode === m ? styles.tabActive : ""}`}
-          >
-            {m}
-          </button>
-        ))}
-      </div>
-
-      <div className={styles.kicker}>
-        {wing?.name ?? design.wing} · Stop No. {design.stopNumber}
+      <div className={styles.headerRow}>
+        <div className={styles.kicker}>
+          {wing?.name ?? design.wing} · Stop No. {design.stopNumber}
+        </div>
+        {hasAudio && (
+          <AudioTourButton
+            slug={design.slug}
+            stopNumber={design.stopNumber}
+            playing={listening}
+            onToggle={setListening}
+          />
+        )}
       </div>
       <h2 className={styles.title}>{design.title}</h2>
       <div className={styles.tagline}>&ldquo;{design.tagline}&rdquo;</div>
 
-      {mode === "PLACARD" ? (
+      {listening ? (
+        <p className={styles.audioText}>{design.audioGuide}</p>
+      ) : (
         <>
           <dl className={styles.facts}>
             {facts.map(([k, v]) => (
@@ -49,15 +51,8 @@ export default function Placard({ design, wing }: { design: Design; wing?: Wing 
             ))}
           </dl>
           <p className={styles.placardText}>{design.placard}</p>
+          {!hasAudio && <p className={styles.audioFallback}>{design.audioGuide}</p>}
         </>
-      ) : (
-        <div>
-          <div className={styles.audioPrompt}>
-            <span className={styles.stopBadge}>{design.stopNumber}</span>
-            {COPY.audioGuidePrompt}
-          </div>
-          <p className={styles.audioText}>{design.audioGuide}</p>
-        </div>
       )}
 
       {design.conservatorNote && (

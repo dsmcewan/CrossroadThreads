@@ -1,0 +1,7 @@
+{
+  "label": "Documentary narrator (baj-tts 'david' VITS checkpoint)",
+  "model": "models/david.pth",
+  "config": "models/config.json",
+  "cuda": false,
+  "note": "Voice clone of a living broadcaster — fine for local/demo use; swap for a licensed or generic narrator voice before commercial launch. Change 'model'/'config' to swap voices; audio regenerates via text+model hash cache."
+}

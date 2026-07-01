@@ -9,28 +9,21 @@
   position: relative;
 }
 
-.tabs {
+.headerRow {
   display: flex;
-  margin-bottom: 16px;
-  border: 1px solid var(--ink);
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
-.tab {
-  flex: 1;
-  padding: 7px 0;
-  cursor: pointer;
-  border: none;
-  font-family: var(--font-caps), serif;
-  letter-spacing: 0.18em;
-  font-size: 0.7rem;
-  background: transparent;
-  color: var(--ink);
-  transition: background 0.2s;
-}
-
-.tabActive {
-  background: var(--ink);
-  color: var(--cream);
+.audioFallback {
+  margin: 12px 0 0;
+  font-family: var(--font-body), serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--brown-mid);
 }
 
 .kicker {

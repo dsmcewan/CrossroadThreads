@@ -17,6 +17,11 @@
 *.tsbuildinfo
 next-env.d.ts
 
+# TTS toolchain (local-only; generated MP3s in public/audio ARE committed)
+/tts/.venv/
+/tts/models/
+/tts/.audio-cache.json
+
 # session memory tooling (not part of the app)
 /.remember/
 /.claude/
