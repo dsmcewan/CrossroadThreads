@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { IM_Fell_English, IM_Fell_English_SC, Ultra } from "next/font/google";
-import { COPY } from "@/lib/copy";
 import MuseumFooter from "@/components/layout/MuseumFooter";
 import MuseumHeader from "@/components/layout/MuseumHeader";
 import "./globals.css";
