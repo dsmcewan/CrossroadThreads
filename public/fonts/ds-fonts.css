@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Ultra DS";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./ultra-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IM Fell English DS";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./im-fell-english-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IM Fell English DS";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./im-fell-english-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IM Fell English SC DS";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./im-fell-english-sc-regular.woff2") format("woff2");
+}
+
+:root {
+  --font-display: "Ultra DS", serif;
+  --font-body: "IM Fell English DS", serif;
+  --font-caps: "IM Fell English SC DS", serif;
+}

@@ -1,0 +1,10 @@
+{
+  "_comment": "design-sync-only tsconfig. The converter's esbuild paths plugin reads compilerOptions.paths from THIS file directly (it does not follow `extends`), so both the real @/* alias and the next/* preview shims must be listed here. baseUrl `..` = the repo root (this file lives in .design-sync/).",
+  "compilerOptions": {
+    "baseUrl": "..",
+    "paths": {
+      "@/*": ["src/*"],
+      "next/link": [".design-sync/shims/next-link.tsx"]
+    }
+  }
+}
