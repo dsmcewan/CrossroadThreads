@@ -1,0 +1,33 @@
+{
+  "projectId": "ffbea2af-2390-486b-b8c1-f6996852b997",
+  "shape": "package",
+  "buildCmd": "npm run catalog && node .design-sync/scripts/gen-css.mjs && node .design-sync/scripts/gen-fixtures.mjs && node .design-sync/scripts/gen-dtsprops.mjs",
+  "pkg": "crossroad-collection",
+  "globalName": "CrossroadThreads",
+  "srcDir": "src/components",
+  "tsconfig": "./.design-sync/tsconfig.sync.json",
+  "cssEntry": ".design-sync/ds-styles.css",
+  "extraFonts": [
+    "public/fonts/ds-fonts.css"
+  ],
+  "libOverrides": {
+    "source-kit.mjs": "synth entry must named-re-export default-export components and shim process for browser previews"
+  },
+  "overrides": {
+    "ExhibitImage": {
+      "cardMode": "column"
+    }
+  },
+  "readmeHeader": ".design-sync/conventions.md",
+  "dtsPropsFor": {
+    "StatusChip": "  /** Which exhibit-status label + color to show. */\n  status: \"ON DISPLAY\" | \"IN CONSERVATION\" | \"UNDER STUDY\";\n  /** Compact size for use inside cards. */\n  small?: boolean;",
+    "ExhibitImage": "  /** Responsive image set from the prebuild manifest. */\n  images: { sourceFile: string; width: number; height: number; blurDataURL: string; card: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[]; full: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[] };\n  alt: string;\n  /** Pick the card (grid) or full (detail) variant set. */\n  kind: \"card\" | \"full\";\n  /** The <img> sizes attribute, e.g. \"(max-width: 640px) 90vw, 270px\". */\n  sizes: string;\n  loading?: \"lazy\" | \"eager\";\n  className?: string;",
+    "AudioTourButton": "  /** Exhibit slug — resolves the narration MP3 at /audio/<slug>.mp3. */\n  slug: string;\n  stopNumber: number;\n  /** Controlled play/stop state. */\n  playing: boolean;\n  onToggle: (playing: boolean) => void;",
+    "MuseumHeader": "  // No props — reads the catalog baked into the bundle.",
+    "MuseumFooter": "  // No props.",
+    "ExhibitCard": "  design: { sourceFile: string; slug: string; title: string; tagline: string; wing: string; status: \"ON DISPLAY\" | \"IN CONSERVATION\" | \"UNDER STUDY\"; stopNumber: number; era: string; region: string; medium: string; edition: string; placard: string; audioGuide: string; conservatorNote?: string; products: { format: \"tee\" | \"poster\"; label: string; price?: string; externalId?: string }[]; curated: boolean; images: { sourceFile: string; width: number; height: number; blurDataURL: string; card: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[]; full: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[] } };\n  /** Position in the grid — staggers the rise-in animation. */\n  index: number;",
+    "GalleryGrid": "  designs: ({ sourceFile: string; slug: string; title: string; tagline: string; wing: string; status: \"ON DISPLAY\" | \"IN CONSERVATION\" | \"UNDER STUDY\"; stopNumber: number; era: string; region: string; medium: string; edition: string; placard: string; audioGuide: string; conservatorNote?: string; products: { format: \"tee\" | \"poster\"; label: string; price?: string; externalId?: string }[]; curated: boolean; images: { sourceFile: string; width: number; height: number; blurDataURL: string; card: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[]; full: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[] } })[];\n  wings: ({ slug: string; name: string; subtitle?: string; order: number })[];",
+    "GiftShopPanel": "  design: { sourceFile: string; slug: string; title: string; tagline: string; wing: string; status: \"ON DISPLAY\" | \"IN CONSERVATION\" | \"UNDER STUDY\"; stopNumber: number; era: string; region: string; medium: string; edition: string; placard: string; audioGuide: string; conservatorNote?: string; products: { format: \"tee\" | \"poster\"; label: string; price?: string; externalId?: string }[]; curated: boolean; images: { sourceFile: string; width: number; height: number; blurDataURL: string; card: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[]; full: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[] } };",
+    "Placard": "  design: { sourceFile: string; slug: string; title: string; tagline: string; wing: string; status: \"ON DISPLAY\" | \"IN CONSERVATION\" | \"UNDER STUDY\"; stopNumber: number; era: string; region: string; medium: string; edition: string; placard: string; audioGuide: string; conservatorNote?: string; products: { format: \"tee\" | \"poster\"; label: string; price?: string; externalId?: string }[]; curated: boolean; images: { sourceFile: string; width: number; height: number; blurDataURL: string; card: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[]; full: { src: string; width: number; height: number; format: \"avif\" | \"webp\" }[] } };\n  wing?: { slug: string; name: string; subtitle?: string; order: number };"
+  }
+}
