@@ -19,9 +19,11 @@ export default function GalleryGrid({
 
   // Restore ?wing= from the URL on mount (effect-guarded: no window during SSG,
   // and useSearchParams would force a Suspense/CSR bailout on static export).
+  // The one-time post-hydration setState is the accepted cost of that trade.
   useEffect(() => {
     const fromUrl = new URLSearchParams(window.location.search).get("wing");
     if (fromUrl && (fromUrl === ALL || wings.some((w) => w.slug === fromUrl))) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setWing(fromUrl);
     }
   }, [wings]);
