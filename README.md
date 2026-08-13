@@ -124,6 +124,12 @@ Commerce is a provider abstraction currently pointing at a placeholder
 ("The gift shop is currently being installed. The docents thank you for your
 patience."). Wiring up Shopify/Printful/Snipcart later is one provider file.
 
+## Colophon
+
+Directed and curated by Drason McEwan — concept, brand voice, catalog, and
+creative direction. Built in collaboration with Claude (Anthropic) as
+implementation partner.
+
 ## License
 
 Code is [MIT](LICENSE). The artwork in `crossroad_imgs/`, the audio

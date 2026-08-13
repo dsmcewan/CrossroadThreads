@@ -2,6 +2,7 @@
   "name": "crossroad-collection",
   "version": "0.1.0",
   "private": true,
+  "author": "Drason McEwan",
   "scripts": {
     "predev": "tsx scripts/build-catalog.ts",
     "dev": "next dev",
