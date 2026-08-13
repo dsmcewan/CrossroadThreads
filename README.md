@@ -126,9 +126,9 @@ patience."). Wiring up Shopify/Printful/Snipcart later is one provider file.
 
 ## Colophon
 
-Directed and curated by Drason McEwan — concept, brand voice, catalog, and
-creative direction. Built in collaboration with Claude (Anthropic) as
-implementation partner.
+Drason McEwan is the museum's director and curator: the concept, the brand
+voice, and the catalog are his. Claude (Anthropic) served as implementation
+partner for the build.
 
 ## License
 
