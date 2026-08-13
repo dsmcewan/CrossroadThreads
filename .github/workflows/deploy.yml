@@ -37,6 +37,7 @@ jobs:
 
       - run: npm ci
 
+      - run: npm run lint
       - run: npm test
 
       # GITHUB_ACTIONS=true is set by the runner, which bakes in the /CrossroadThreads basePath
