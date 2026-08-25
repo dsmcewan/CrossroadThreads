@@ -5,36 +5,30 @@
 [![Deploy to GitHub Pages](https://github.com/dsmcewan/CrossroadThreads/actions/workflows/deploy.yml/badge.svg)](https://github.com/dsmcewan/CrossroadThreads/actions/workflows/deploy.yml)
 [![Live site](https://img.shields.io/badge/live-dsmcewan.github.io%2FCrossroadThreads-2d2a24)](https://dsmcewan.github.io/CrossroadThreads/)
 
-**Live: [dsmcewan.github.io/CrossroadThreads](https://dsmcewan.github.io/CrossroadThreads/)**
+**Live:** [dsmcewan.github.io/CrossroadThreads](https://dsmcewan.github.io/CrossroadThreads/)  
+**Hiring / engineering review:** [start with `CAREER.md`](CAREER.md)
 
 <p align="center">
   <img src="docs/screenshots/hero.jpg" alt="The gallery — masonry of framed exhibits with wing filters" width="720">
 </p>
 
-Crossroad Threads is an apparel brand where Southern Gothic Americana meets
-mythology — "a publishing house that prints on cotton." The storefront leans
-all the way into the conceit: every design is an *exhibit*, product categories
-are museum *wings*, each shirt gets a curator's placard, a provenance line, a
-conservation status, and its own narrated audio-guide stop. The gift shop is
-the museum.
+Crossroad Threads is an apparel brand where Southern Gothic Americana meets mythology — **a publishing house that prints on cotton**.
 
-This repo turns a single-file React prototype into a production static site:
-**103 exhibits, five wings, 103 narrated audio stops, fully static, deployed
-from CI to GitHub Pages.**
+The storefront commits to the conceit: every design is an *exhibit*, product categories are museum *wings*, each shirt gets a curator's placard, provenance, conservation status, and its own narrated audio-guide stop. The gift shop is the museum.
+
+This repository turns a single-file React prototype into a production static site: **103 exhibits, five wings, 103 narrated audio stops, fully static, deployed from CI to GitHub Pages.**
 
 ## The exhibit page
-
-Placard with era / provenance / medium / edition, conservator's notes for
-imperfect prints, and a headphones button that plays the audio guide while
-showing its transcript.
 
 | Placard | Audio guide playing |
 | --- | --- |
 | ![Exhibit placard](docs/screenshots/exhibit.png) | ![Audio guide transcript view](docs/screenshots/exhibit-audio.png) |
 
-## How it works
+Each exhibit combines product information with museum-style metadata, conservator notes, and optional narrated interpretation without requiring a server-side application.
 
-```
+## Build architecture
+
+```text
 crossroad_imgs/*.png ──┐
                        ├─► scripts/build-catalog.ts ─► catalog.generated.json ─► Next.js static export ─► GitHub Pages
 content/designs.json ──┘         │
@@ -46,58 +40,44 @@ catalog ─► tts/generate_audio.py (local VITS) ─► public/audio/<slug>.mp3
 
 ### Dynamic catalog with auto-accessioning
 
-The catalog is generated at build time by scanning the image folder and
-merging it with curated metadata in [`content/designs.json`](content/designs.json)
-(the single editable source of truth). Any image **without** a curated entry
-isn't an error — it's automatically accessioned into a "Recent Acquisitions —
-Under Study" wing with museum-voice placeholder copy. Drop a new PNG in the
-folder and it appears in the gallery on the next build. Curated entries that
-reference a missing file fail the build loudly. The merge logic is a pure
-function with Vitest coverage.
+The catalog is generated at build time by scanning the image folder and merging it with curated metadata in [`content/designs.json`](content/designs.json), the single editable source of truth.
+
+An image without a curated entry is automatically accessioned into **Recent Acquisitions — Under Study** with placeholder museum copy. A curated entry that references a missing file fails the build loudly. The merge is implemented as a pure function with Vitest coverage.
 
 ### Static-export image pipeline
 
-GitHub Pages can't run `next/image`'s optimizer, so the repo has its own:
-a sharp-based prebuild step encodes each source PNG into AVIF (q50) and WebP
-(q72) at card and full sizes, plus a 20px blur-up placeholder inlined as
-base64. Outputs are content-addressed (SHA-1 of the source) so unchanged
-images are never re-encoded — locally via `.image-cache.json`, and in CI via
-`actions/cache` keyed on the image folder's hash. **330 MB of source PNGs
-ship as ~89 MB of derivatives**, served through a hand-rolled `<picture>`
-component with `srcset`.
+GitHub Pages cannot run `next/image` optimization, so the repository has its own prebuild pipeline.
+
+`sharp` encodes source PNGs into AVIF and WebP derivatives at card and full sizes plus a 20px blur-up placeholder. Outputs are content-addressed using the source hash, so unchanged images are not re-encoded locally or in CI.
+
+**~330 MB of source PNGs ship as ~89 MB of derivatives**, served through a custom `<picture>` component with responsive `srcset`.
 
 ### Perceptual-hash provenance matching
 
-The original prototype embedded 11 designs as base64 thumbnails with finished
-copy. The asset library has 103 similarly-named PNGs, including multiple
-renditions of the same concepts — filename matching was impossible and visual
-matching was ambiguous. Solution: dHash perceptual hashing (16×16 gradient
-hash, Hamming distance) between the embedded thumbnails and every source
-file. True matches landed at distance ≤ 8 while the nearest non-matches were
-≥ 87, so the 11 exhibits with hand-finished copy were re-attached to their
-exact source images deterministically.
+The original prototype embedded 11 finished designs as base64 thumbnails. The asset library later contained 103 similarly named source images, including multiple variants of the same concepts, making filename matching unreliable.
+
+The project uses **dHash perceptual hashing + Hamming distance** to match each embedded thumbnail back to its correct source file. True matches landed at distance ≤ 8 while the nearest non-matches were ≥ 87, allowing the finished copy to be reattached deterministically rather than by manual guesswork.
 
 ### Local TTS audio tour
 
-Every exhibit's audio-guide text is synthesized to MP3 with a local VITS
-model ([baj-tts](https://github.com/enlyth/baj-tts) via coqui-tts) — 103
-narrations, 17 MB total at 64 kbps mono. Synthesis is cached by
-`SHA-1(model | text)`, so editing one placard regenerates one file. Text is
-normalized first (em-dashes to spoken beats, curly quotes flattened) because
-the phonemizer silently drops typography it can't voice. CI doesn't run TTS;
-the MP3s are committed and a generated manifest tells the UI which exhibits
-get the headphones button. See [`tts/README.md`](tts/README.md) — including
-the note that the demo narrator voice is a clone and must be swapped for a
-licensed voice before any commercial use.
+Each exhibit's audio-guide text can be synthesized locally to MP3 using a VITS pipeline. Synthesis is cached by `SHA-1(model | text)`, so changing one placard regenerates one file.
+
+Text is normalized before synthesis because some typography is silently dropped by the phonemizer. CI does not run TTS; committed audio files are exposed through a generated manifest consumed by the frontend.
+
+See [`tts/README.md`](tts/README.md). The demo narrator voice must be replaced with a properly licensed voice before commercial use.
 
 ### GitHub Pages hardening
 
-Project sites live under a subpath, which breaks every naively-rooted asset
-URL. All static paths go through one `asset()` helper that applies the
-basePath; a post-build verifier (`scripts/verify-export.mjs`) walks the
-export and fails if any local URL is missing the prefix, any exhibit page is
-missing, or `.nojekyll`/`404.html` are absent. `npm run preview:pages` serves
-the export under the real subpath so what you click locally is what deploys.
+Project sites live under a subpath, which breaks naive root-relative URLs.
+
+All local static paths go through one `asset()` helper that applies the configured base path. A post-build verifier in `scripts/verify-export.mjs` walks the export and fails if:
+
+- a local URL is missing the required prefix
+- an exhibit page is missing
+- `.nojekyll` is missing
+- `404.html` is missing
+
+`npm run preview:pages` serves the export under the real `/CrossroadThreads/` subpath so local verification matches the hosting environment.
 
 ## Mobile
 
@@ -105,33 +85,30 @@ the export under the real subpath so what you click locally is what deploys.
 
 ## Stack
 
-Next.js 15 (App Router, `output: 'export'`) · TypeScript · CSS Modules ·
-sharp · Vitest · Playwright (screenshots) · Python VITS TTS · GitHub Actions
+Next.js 15 (App Router, `output: 'export'`) · React · TypeScript · CSS Modules · sharp · Vitest · Playwright · Python VITS TTS · GitHub Actions
 
-## Running it
+## Run locally
 
 ```bash
 npm install
-npm run dev        # builds catalog + image derivatives, then next dev
-npm test           # catalog merge logic
-npm run build      # static export to out/ + post-build verification
-npm run preview:pages   # serve out/ under /CrossroadThreads/ like Pages does
+npm run dev             # catalog + image derivatives + dev server
+npm test                # catalog merge tests
+npm run build           # static export + post-build verification
+npm run preview:pages   # preview under the real GitHub Pages subpath
 ```
 
-Audio generation is optional and local-only — setup in [`tts/README.md`](tts/README.md).
+Audio generation is optional and local-only; setup lives in [`tts/README.md`](tts/README.md).
 
-Commerce is a provider abstraction currently pointing at a placeholder
-("The gift shop is currently being installed. The docents thank you for your
-patience."). Wiring up Shopify/Printful/Snipcart later is one provider file.
+Commerce is currently isolated behind a provider abstraction with a placeholder implementation, so a later Shopify/Printful/Snipcart integration does not need to reshape the catalog or presentation layer.
+
+## Engineering review
+
+For the short employment-facing walkthrough, see [`CAREER.md`](CAREER.md). It highlights the product-incubation, frontend, content-pipeline, media, deterministic matching, and deployment work represented here.
 
 ## Colophon
 
-Drason McEwan is the museum's director and curator: the concept, the brand
-voice, and the catalog are his. Claude (Anthropic) served as implementation
-partner for the build.
+Drason McEwan created the product concept, brand direction, content system, and architecture. AI coding collaborators assisted with implementation and iteration.
 
 ## License
 
-Code is [MIT](LICENSE). The artwork in `crossroad_imgs/`, the audio
-narrations, and all Crossroad Threads brand copy and designs are
-**© All rights reserved** — see [LICENSE](LICENSE) for the split.
+Code is [MIT](LICENSE). The artwork in `crossroad_imgs/`, audio narrations, brand copy, and Crossroad Threads designs are **© All rights reserved** — see [LICENSE](LICENSE) for the split.
