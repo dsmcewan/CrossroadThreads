@@ -1,12 +1,10 @@
 /** Museum-voice string constants. One place to edit the institution's tone. */
 export const COPY = {
   department: "Department of Applied Mythology",
-  siteTitle: "THE CROSSROAD ARCHIVE",
   siteTitleLines: ["THE CROSSROAD", "ARCHIVE"] as const,
   subtitle: "A permanent exhibit of Crossroad Threads · Admission is the joke itself",
   footer: "Crossroad Threads · The gift shop is the museum",
   allWings: "All Wings",
-  audioGuidePrompt: "Press play on your handset",
   returnToGallery: "Return to Gallery",
   notFoundTitle: "This exhibit has been deaccessioned",
   notFoundBody:

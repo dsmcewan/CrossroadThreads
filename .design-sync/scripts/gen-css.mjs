@@ -5,7 +5,7 @@
 // definitions into the styles.css closure — otherwise designs built with the
 // DS fall back to serif because the vars are referenced but never defined.
 // Regenerate whenever src/app/globals.css changes:
-//   node .ds-sync/gen-css.mjs
+//   node .design-sync/scripts/gen-css.mjs
 import { readFileSync, writeFileSync } from "node:fs";
 
 const globals = readFileSync("src/app/globals.css", "utf8");

@@ -13,16 +13,6 @@ mkdirSync(OUT, { recursive: true });
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
 
-// Gallery — hero shot (header + first rows of masonry)
-await page.goto(`${BASE}/`, { waitUntil: "networkidle" });
-await page.waitForTimeout(1200); // let rise animations settle
-await page.screenshot({ path: `${OUT}/gallery.png` });
-
-// Gallery — wing filtered
-await page.getByRole("button", { name: "Bless Your Heart" }).click();
-await page.waitForTimeout(900);
-await page.screenshot({ path: `${OUT}/gallery-wing.png` });
-
 // Exhibit page — placard + audio button
 await page.goto(`${BASE}/exhibit/medusa/`, { waitUntil: "networkidle" });
 await page.waitForTimeout(800);

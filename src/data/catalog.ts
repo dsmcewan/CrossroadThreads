@@ -3,10 +3,6 @@ import catalogJson from "./catalog.generated.json";
 
 const catalog = catalogJson as unknown as Catalog;
 
-export function getCatalog(): Catalog {
-  return catalog;
-}
-
 export function getDesigns(): Design[] {
   return catalog.designs;
 }
