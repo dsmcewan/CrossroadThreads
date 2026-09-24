@@ -1,7 +1,7 @@
 // One-off: compose accurate, self-contained <Name>Props bodies for cfg.dtsPropsFor.
 // Synth-entry mode can't extract the inline prop types, so each body must inline
 // every referenced type (the emitted .d.ts only imports React). Run from repo
-// root: node .ds-sync/gen-dtsprops.mjs
+// root: node .design-sync/scripts/gen-dtsprops.mjs
 import { readFileSync, writeFileSync } from "node:fs";
 
 // Shared shapes, fully inlined (no type aliases survive in the emitted .d.ts).
